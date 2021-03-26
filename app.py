@@ -19,7 +19,7 @@ if __name__ == '__main__':
             await pavels_day(dp)
 
     scheduler = AsyncIOScheduler()
-    scheduler.add_job(pavels_day_test, 'cron', hour=16, minute=49)
+    scheduler.add_job(pavels_day_test, 'cron', hour=9, minute=30)
     scheduler.start()
     
     executor.start_polling(dp,on_startup=startup)
