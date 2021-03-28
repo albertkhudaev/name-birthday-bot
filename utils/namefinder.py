@@ -2,11 +2,11 @@ import requests
 import re
 import asyncio
 
-res = requests.get("https://my-calend.ru/name-days")
 pattern = r"Сегодня, \d+ \w+, по церковному православному календарю отмечается \d+ \w+:.+именины"
 namepattern = r">\w+</a>"
 
 async def findnames():
+    res = requests.get("https://my-calend.ru/name-days")
     birth = []
     names = []
     outnames = []
